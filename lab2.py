@@ -1,24 +1,19 @@
-#Print all key names in the dictionary, one by one:
+#Make a copy of a dictionary with the copy() method:
 
-for x in thisdict:
-  print(x)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
 
-#Print all values in the dictionary, one by one:
+#Make a copy of a dictionary with the dict() function:
 
-for x in thisdict:
-  print(thisdict[x])
-
-#You can also use the values() method to return values of a dictionary:
-
-for x in thisdict.values():
-  print(x)
-
-#You can use the keys() method to return the keys of a dictionary:
-
-for x in thisdict.keys():
-  print(x)
-
-#Loop through both keys and values, by using the items() method:
-
-for x, y in thisdict.items():
-  print(x, y)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
