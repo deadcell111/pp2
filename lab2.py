@@ -1,19 +1,49 @@
-#Make a copy of a dictionary with the copy() method:
+#Create a dictionary that contain three dictionaries:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
 }
-mydict = thisdict.copy()
-print(mydict)
 
-#Make a copy of a dictionary with the dict() function:
+#Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
 }
-mydict = dict(thisdict)
-print(mydict)
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+
+#Print the name of child 2:
+
+print(myfamily["child2"]["name"])
+
+#Loop through the keys and values of all nested dictionaries:
+
+for x, obj in myfamily.items():
+  print(x)
+
+  for y in obj:
+    print(y + ':', obj[y])
