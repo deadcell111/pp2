@@ -1,66 +1,14 @@
 """Example
-Print a message based on whether the condition is True or False:"""
+Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:"""
 
-a = 200
-b = 33
-
-if b > a:
-  print("b is greater than a")
-else:
-  print("b is not greater than a")
+print((6 + 3) - (6 + 3))
 
 """Example
-Evaluate a string and a number:"""
+Multiplication * has higher precedence than addition +, and therefor multiplications are evaluated before additions:"""
 
-print(bool("Hello"))
-print(bool(15))
-
-"""Example
-The following will return True:"""
-
-bool("abc")
-bool(123)
-bool(["apple", "cherry", "banana"])
+print(100 + 5 * 3)
 
 """Example
-The following will return False:"""
+Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:"""
 
-bool(False)
-bool(None)
-bool(0)
-bool("")
-bool(())
-bool([])
-bool({})
-
-#Example
-class myclass():
-  def __len__(self):
-    return 0
-
-myobj = myclass()
-print(bool(myobj))
-
-#Print the answer of a function:
-
-def myFunction() :
-  return True
-
-print(myFunction())
-
-"""Example
-Print "YES!" if the function returns True, otherwise print "NO!":"""
-
-def myFunction() :
-  return True
-
-if myFunction():
-  print("YES!")
-else:
-  print("NO!")
-
-"""Example
-Check if an object is an integer or not:"""
-
-x = 200
-print(isinstance(x, int))
+print(5 + 4 - 7 + 3)
