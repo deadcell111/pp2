@@ -1,14 +1,41 @@
 """Example
-Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:"""
+Create a List:"""
 
-print((6 + 3) - (6 + 3))
-
-"""Example
-Multiplication * has higher precedence than addition +, and therefor multiplications are evaluated before additions:"""
-
-print(100 + 5 * 3)
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
 
 """Example
-Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:"""
+Lists allow duplicate values:"""
 
-print(5 + 4 - 7 + 3)
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+
+"""Example
+Print the number of items in the list:"""
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+
+"""Example
+String, int and boolean data types:"""
+
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+
+"""Example
+A list with strings, integers and boolean values:"""
+
+list1 = ["abc", 34, True, 40, "male"]
+
+"""Example
+What is the data type of a list?"""
+
+mylist = ["apple", "banana", "cherry"]
+print(type(mylist))
+
+"""Example
+Using the list() constructor to make a List:"""
+
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
