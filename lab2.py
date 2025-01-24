@@ -1,49 +1,24 @@
-#The pop() method removes the item with the specified key name:
+#Print all key names in the dictionary, one by one:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.pop("model")
-print(thisdict)
+for x in thisdict:
+  print(x)
 
-#The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+#Print all values in the dictionary, one by one:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.popitem()
-print(thisdict)
+for x in thisdict:
+  print(thisdict[x])
 
-#The del keyword removes the item with the specified key name:
+#You can also use the values() method to return values of a dictionary:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-del thisdict["model"]
-print(thisdict)
+for x in thisdict.values():
+  print(x)
 
-#The del keyword can also delete the dictionary completely:
+#You can use the keys() method to return the keys of a dictionary:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-del thisdict
-print(thisdict) #this will cause an error because "thisdict" no longer exists.
+for x in thisdict.keys():
+  print(x)
 
-#The clear() method empties the dictionary:
+#Loop through both keys and values, by using the items() method:
 
-thisdict = {
-  "brand": "Ford",
-  "model": "Mustang",
-  "year": 1964
-}
-thisdict.clear()
-print(thisdict)
+for x, y in thisdict.items():
+  print(x, y)
