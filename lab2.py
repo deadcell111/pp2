@@ -1,22 +1,16 @@
-"""Example
-Iterate through the items and print the values:"""
+#Example
+#Join two tuples:
 
-thistuple = ("apple", "banana", "cherry")
-for x in thistuple:
-  print(x)
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
 
 #Example
-#Print all items by referring to their index number:
+#Multiply the fruits tuple by 2:
 
-thistuple = ("apple", "banana", "cherry")
-for i in range(len(thistuple)):
-  print(thistuple[i])
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
 
-#Example
-#Print all items, using a while loop to go through all the index numbers:
-
-thistuple = ("apple", "banana", "cherry")
-i = 0
-while i < len(thistuple):
-  print(thistuple[i])
-  i = i + 1
+print(mytuple)
