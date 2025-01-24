@@ -1,37 +1,33 @@
-#Test if a is greater than b, AND if c is greater than a:
+#Print i as long as i is less than 6:
 
-a = 200
-b = 33
-c = 500
-if a > b and c > a:
-  print("Both conditions are True")
+i = 1
+while i < 6:
+  print(i)
+  i += 1
 
-#Test if a is greater than b, OR if a is greater than c:
+#Exit the loop when i is 3:
 
-a = 200
-b = 33
-c = 500
-if a > b or a > c:
-  print("At least one of the conditions is True")
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
 
-#Test if a is NOT greater than b:
+#Continue to the next iteration if i is 3:
 
-a = 33
-b = 200
-if not a > b:
-  print("a is NOT greater than b")
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
 
-x = 41
+#Print a message once the condition is false:
 
-if x > 10:
-  print("Above ten,")
-  if x > 20:
-    print("and also above 20!")
-  else:
-    print("but not above 20.")
-
-a = 33
-b = 200
-
-if b > a:
-  pass
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
