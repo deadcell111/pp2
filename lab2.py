@@ -1,41 +1,42 @@
 """Example
-Create a List:"""
+Print the second item of the list:"""
 
 thislist = ["apple", "banana", "cherry"]
-print(thislist)
+print(thislist[1])
 
 """Example
-Lists allow duplicate values:"""
-
-thislist = ["apple", "banana", "cherry", "apple", "cherry"]
-print(thislist)
-
-"""Example
-Print the number of items in the list:"""
+Print the last item of the list:"""
 
 thislist = ["apple", "banana", "cherry"]
-print(len(thislist))
+print(thislist[-1])
 
 """Example
-String, int and boolean data types:"""
+Return the third, fourth, and fifth item:"""
 
-list1 = ["apple", "banana", "cherry"]
-list2 = [1, 5, 7, 9, 3]
-list3 = [True, False, False]
-
-"""Example
-A list with strings, integers and boolean values:"""
-
-list1 = ["abc", 34, True, 40, "male"]
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
 
 """Example
-What is the data type of a list?"""
+This example returns the items from the beginning to, but NOT including, "kiwi":"""
 
-mylist = ["apple", "banana", "cherry"]
-print(type(mylist))
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
 
 """Example
-Using the list() constructor to make a List:"""
+This example returns the items from "cherry" to the end:"""
 
-thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
-print(thislist)
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+
+"""Example
+This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):"""
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+"""Example
+Check if "apple" is present in the list:"""
+
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
