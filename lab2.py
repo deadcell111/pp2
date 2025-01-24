@@ -1,27 +1,41 @@
-#ExampleGet your own Python Server
-#Add an item to a set, using the add() method:
+#Remove "banana" by using the remove() method:
 
 thisset = {"apple", "banana", "cherry"}
 
-thisset.add("orange")
+thisset.remove("banana")
 
 print(thisset)
 
-#Add elements from tropical into thisset:
+#Remove "banana" by using the discard() method:
 
 thisset = {"apple", "banana", "cherry"}
-tropical = {"pineapple", "mango", "papaya"}
 
-thisset.update(tropical)
+thisset.discard("banana")
 
 print(thisset)
 
-#Example
-#Add elements of a list to at set:
+#Remove a random item by using the pop() method:
 
 thisset = {"apple", "banana", "cherry"}
-mylist = ["kiwi", "orange"]
 
-thisset.update(mylist)
+x = thisset.pop()
+
+print(x)
+
+print(thisset)
+
+#The clear() method empties the set:
+
+thisset = {"apple", "banana", "cherry"}
+
+thisset.clear()
+
+print(thisset)
+
+#The del keyword will delete the set completely:
+
+thisset = {"apple", "banana", "cherry"}
+
+del thisset
 
 print(thisset)
