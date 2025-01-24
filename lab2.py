@@ -1,35 +1,54 @@
-#Join set1 and set2 into a new set:
+#Create and print a dictionary:
 
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
 
-set3 = set1.union(set2)
-print(set3)
+#Print the "brand" value of the dictionary:
 
-#Join multiple sets with the union() method:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
 
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
-set3 = {"John", "Elena"}
-set4 = {"apple", "bananas", "cherry"}
+#Duplicate values will overwrite existing values:
 
-myset = set1.union(set2, set3, set4)
-print(myset)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
 
-#Use | to join two sets:
+#Print the number of items in the dictionary:
 
-set1 = {"a", "b", "c"}
-set2 = {1, 2, 3}
-set3 = {"John", "Elena"}
-set4 = {"apple", "bananas", "cherry"}
+print(len(thisdict))
 
-myset = set1 | set2 | set3 |set4
-print(myset)
+#String, int, boolean, and list data types:
 
-#Join a set with a tuple:
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
 
-x = {"a", "b", "c"}
-y = (1, 2, 3)
+#Print the data type of a dictionary:
 
-z = x.union(y)
-print(z)
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+
+#Using the dict() method to make a dictionary:
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
