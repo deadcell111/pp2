@@ -1,49 +1,42 @@
-#Create a dictionary that contain three dictionaries:
+#If statement:
 
-myfamily = {
-  "child1" : {
-    "name" : "Emil",
-    "year" : 2004
-  },
-  "child2" : {
-    "name" : "Tobias",
-    "year" : 2007
-  },
-  "child3" : {
-    "name" : "Linus",
-    "year" : 2011
-  }
-}
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
 
-#Create three dictionaries, then create one dictionary that will contain the other three dictionaries:
+#Example
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
 
-child1 = {
-  "name" : "Emil",
-  "year" : 2004
-}
-child2 = {
-  "name" : "Tobias",
-  "year" : 2007
-}
-child3 = {
-  "name" : "Linus",
-  "year" : 2011
-}
+#Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
 
-myfamily = {
-  "child1" : child1,
-  "child2" : child2,
-  "child3" : child3
-}
+#Example
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
 
-#Print the name of child 2:
+#One line if statement:
 
-print(myfamily["child2"]["name"])
+if a > b: print("a is greater than b")
 
-#Loop through the keys and values of all nested dictionaries:
+#One line if else statement:
 
-for x, obj in myfamily.items():
-  print(x)
-
-  for y in obj:
-    print(y + ':', obj[y])
+a = 2
+b = 330
+print("A") if a > b else print("B")
