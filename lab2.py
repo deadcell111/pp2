@@ -1,37 +1,22 @@
 """Example
-Packing a tuple:"""
+Iterate through the items and print the values:"""
 
-fruits = ("apple", "banana", "cherry")
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
 
-"""Example
-Unpacking a tuple:"""
+#Example
+#Print all items by referring to their index number:
 
-fruits = ("apple", "banana", "cherry")
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
 
-(green, yellow, red) = fruits
+#Example
+#Print all items, using a while loop to go through all the index numbers:
 
-print(green)
-print(yellow)
-print(red)
-
-"""Example
-Assign the rest of the values as a list called "red":"""
-
-fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
-
-(green, yellow, *red) = fruits
-
-print(green)
-print(yellow)
-print(red)
-
-"""Example
-Add a list of values the "tropic" variable:"""
-
-fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
-
-(green, *tropic, red) = fruits
-
-print(green)
-print(tropic)
-print(red)
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
