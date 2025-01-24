@@ -1,47 +1,28 @@
 """Example
-Remove "banana":"""
+Print all items in the list, one by one:"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist.remove("banana")
-print(thislist)
+for x in thislist:
+  print(x)
 
 """Example
-Remove the first occurrence of "banana":"""
-
-thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
-thislist.remove("banana")
-print(thislist)
-
-"""Example
-Remove the second item:"""
+Print all items by referring to their index number:"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist.pop(1)
-print(thislist)
+for i in range(len(thislist)):
+  print(thislist[i])
 
 """Example
-Remove the last item:"""
+Print all items, using a while loop to go through all the index numbers"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist.pop()
-print(thislist)
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
 
 """Example
-Remove the first item:"""
+A short hand for loop that will print all items in a list:"""
 
 thislist = ["apple", "banana", "cherry"]
-del thislist[0]
-print(thislist)
-
-"""Example
-Delete the entire list:"""
-
-thislist = ["apple", "banana", "cherry"]
-del thislist
-
-"""Example
-Clear the list content:"""
-
-thislist = ["apple", "banana", "cherry"]
-thislist.clear()
-print(thislist)
+[print(x) for x in thislist]
