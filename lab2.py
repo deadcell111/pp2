@@ -1,51 +1,42 @@
 """Example
-Create a Tuple:"""
+Print the second item in the tuple:"""
 
 thistuple = ("apple", "banana", "cherry")
-print(thistuple)
+print(thistuple[1])
 
 """Example
-Tuples allow duplicate values:"""
-
-thistuple = ("apple", "banana", "cherry", "apple", "cherry")
-print(thistuple)
-
-"""Example
-Print the number of items in the tuple:"""
+Print the last item of the tuple:"""
 
 thistuple = ("apple", "banana", "cherry")
-print(len(thistuple))
+print(thistuple[-1])
 
 """Example
-One item tuple, remember the comma:"""
+Return the third, fourth, and fifth item:"""
 
-thistuple = ("apple",)
-print(type(thistuple))
-
-#NOT a tuple
-thistuple = ("apple")
-print(type(thistuple))
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
 
 """Example
-String, int and boolean data types:"""
+This example returns the items from the beginning to, but NOT included, "kiwi":"""
 
-tuple1 = ("apple", "banana", "cherry")
-tuple2 = (1, 5, 7, 9, 3)
-tuple3 = (True, False, False)
-
-"""Example
-A tuple with strings, integers and boolean values:"""
-
-tuple1 = ("abc", 34, True, 40, "male")
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[:4])
 
 """Example
-What is the data type of a tuple?"""
+This example returns the items from "cherry" and to the end:"""
 
-mytuple = ("apple", "banana", "cherry")
-print(type(mytuple))
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:])
 
 """Example
-Using the tuple() method to make a tuple:"""
+This example returns the items from index -4 (included) to index -1 (excluded)"""
 
-thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
-print(thistuple)
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-1])
+
+"""Example
+Check if "apple" is present in the tuple:"""
+
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
