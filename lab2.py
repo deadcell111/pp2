@@ -1,21 +1,27 @@
-#Example
-#Loop through the set, and print the values:
+#ExampleGet your own Python Server
+#Add an item to a set, using the add() method:
 
 thisset = {"apple", "banana", "cherry"}
 
-for x in thisset:
-  print(x)
+thisset.add("orange")
 
-#Example
-#Check if "banana" is present in the set:
+print(thisset)
 
-thisset = {"apple", "banana", "cherry"}
-
-print("banana" in thisset)
-
-#Example
-#Check if "banana" is NOT present in the set:
+#Add elements from tropical into thisset:
 
 thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
 
-print("banana" not in thisset)
+thisset.update(tropical)
+
+print(thisset)
+
+#Example
+#Add elements of a list to at set:
+
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+
+thisset.update(mylist)
+
+print(thisset)
