@@ -1,41 +1,37 @@
 """Example
-Convert the tuple into a list to be able to change it:"""
+Packing a tuple:"""
 
-x = ("apple", "banana", "cherry")
-y = list(x)
-y[1] = "kiwi"
-x = tuple(y)
-
-print(x)
+fruits = ("apple", "banana", "cherry")
 
 """Example
-Convert the tuple into a list, add "orange", and convert it back into a tuple:"""
+Unpacking a tuple:"""
 
-thistuple = ("apple", "banana", "cherry")
-y = list(thistuple)
-y.append("orange")
-thistuple = tuple(y)
+fruits = ("apple", "banana", "cherry")
 
-"""Example
-Create a new tuple with the value "orange", and add that tuple:"""
+(green, yellow, red) = fruits
 
-thistuple = ("apple", "banana", "cherry")
-y = ("orange",)
-thistuple += y
-
-print(thistuple)
+print(green)
+print(yellow)
+print(red)
 
 """Example
-Convert the tuple into a list, remove "apple", and convert it back into a tuple:"""
+Assign the rest of the values as a list called "red":"""
 
-thistuple = ("apple", "banana", "cherry")
-y = list(thistuple)
-y.remove("apple")
-thistuple = tuple(y)
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
 
 """Example
-The del keyword can delete the tuple completely:"""
+Add a list of values the "tropic" variable:"""
 
-thistuple = ("apple", "banana", "cherry")
-del thistuple
-print(thistuple) #this will raise an error because the tuple no longer exists
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
