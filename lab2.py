@@ -1,34 +1,29 @@
-"""Example
-Change the second item:"""
+"""ExampleGet your own Python Server
+Using the append() method to append an item:"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist[1] = "blackcurrant"
+thislist.append("orange")
 print(thislist)
 
 """Example
-Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":"""
+Insert an item as the second position:"""
 
-thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
-thislist[1:3] = ["blackcurrant", "watermelon"]
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
 print(thislist)
 
 """Example
-Change the second value by replacing it with two new values:"""
+Add the elements of tropical to thislist:"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist[1:2] = ["blackcurrant", "watermelon"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
 print(thislist)
 
 """Example
-Change the second and third value by replacing it with one value:"""
+Add elements of a tuple to a list:"""
 
 thislist = ["apple", "banana", "cherry"]
-thislist[1:3] = ["watermelon"]
-print(thislist)
-
-"""Example
-Insert "watermelon" as the third item:"""
-
-thislist = ["apple", "banana", "cherry"]
-thislist.insert(2, "watermelon")
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
 print(thislist)
