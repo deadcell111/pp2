@@ -1,28 +1,51 @@
-"""Example
-Print all items in the list, one by one:"""
+#Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
 
-thislist = ["apple", "banana", "cherry"]
-for x in thislist:
-  print(x)
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
 
-"""Example
-Print all items by referring to their index number:"""
+print(newlist)
 
-thislist = ["apple", "banana", "cherry"]
-for i in range(len(thislist)):
-  print(thislist[i])
+#Example
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 
-"""Example
-Print all items, using a while loop to go through all the index numbers"""
+newlist = [x for x in fruits if "a" in x]
 
-thislist = ["apple", "banana", "cherry"]
-i = 0
-while i < len(thislist):
-  print(thislist[i])
-  i = i + 1
+print(newlist)
 
 """Example
-A short hand for loop that will print all items in a list:"""
+Only accept items that are not "apple":"""
 
-thislist = ["apple", "banana", "cherry"]
-[print(x) for x in thislist]
+newlist = [x for x in fruits if x != "apple"]
+
+"""Example
+With no if statement:"""
+
+newlist = [x for x in fruits]
+
+"""Example
+You can use the range() function to create an iterable:"""
+
+newlist = [x for x in range(10)]
+
+"""Example
+Accept only numbers lower than 5:"""
+
+newlist = [x for x in range(10) if x < 5]
+
+"""Example
+Set the values in the new list to upper case:"""
+
+newlist = [x.upper() for x in fruits]
+
+"""Example
+Set all values in the new list to 'hello':"""
+
+newlist = ['hello' for x in fruits]
+
+"""Example
+Return "orange" instead of "banana":"""
+
+newlist = [x if x != "banana" else "orange" for x in fruits]
