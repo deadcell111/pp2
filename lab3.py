@@ -1,15 +1,18 @@
 class Shape:
     def area(self):
         print(0)
-class Square(Shape):
-    def __init__(self,length):
-        length = int(input())
+class Rectangle(Shape):
+    def __init__(self,length = None,width = None):
+        if length is None and width is None:
+            length = int(input())
+            width = int(input())
         self.length = length
+        self.width = width
     def area(self):
-        print(pow(self.length,2))
+        print(self.length * self.width)
 #Example:   
 if __name__ == "__main__":
     obj = Shape()
     obj.area()
-    square = Square(5)
-    square.area()
+    rec = Rectangle()
+    rec.area()
