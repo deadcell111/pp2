@@ -1,4 +1,5 @@
-def Gr_into_oun(x):
-    return x * 28.3495231
-a = int(input("grams: "))
-print("grams in ounces: ", Gr_into_oun(a))
+def Centigrade(F):
+    C = (5/9) * (F - 32)
+    return C
+F = int(input("Farenheit: "))
+print("In Centigrade: ",Centigrade(F))   
