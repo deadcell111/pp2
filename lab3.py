@@ -1,8 +1,12 @@
-def has_33(nums):
-    for i in range(len(nums) - 1):
-        if(nums[i] == 3 and nums[i + 1] == 3):
+def spy_game(nums):
+    code = [0,0,7]
+    index = 0
+    for i in nums:
+        if i == code[index]:
+            index += 1
+        if len(code) == index:
             return True
     return False
-print(has_33([1, 3, 3]))
-print(has_33([1, 3, 1, 3]))
-print(has_33([3, 1, 3]))
+print(spy_game([1,2,4,0,0,7,5])) #True
+print(spy_game([1,0,2,4,0,5,7])) #True
+print(spy_game([1,7,2,0,4,5,0])) #False         
