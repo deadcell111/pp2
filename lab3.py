@@ -1,8 +1,8 @@
-def unique(nums):
-    unique_set = []
-    for num in nums:
-        if num not in unique_set:
-            unique_set.append(num)
-    return unique_set
-l = [1,2,3,4,5,2,3,4,5,6]
-print(unique(l))
+import string
+def is_palindrome(s):
+    whilelist = set(string.ascii_lowercase)
+    s = s.lower()
+    s = ''.join([c for c in s if c in whilelist])
+    return s == s[::-1]
+s = input()
+print(is_palindrome(s))
