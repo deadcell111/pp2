@@ -1,17 +1,15 @@
-import random
-print("Hello! What is your name?")
-name = input()
-print(f"Well, {name}, I am thinking of a number between 1 and 20.\nTake a guess.")
-x = random.randint(1,20)
-rep = 0
-t = True
-while t:
-        y = int(input())
-        rep += 1
-        if x != y:
-            print("Your guess is too low.\nTake a guess.")
-            t = True
-        else:
-            print(f"Good job, {name}! You guessed my number in {rep} guesses!")
-            t = False
-
+from itertools import permutations
+def unique(nums):
+    unique_set = []
+    for num in nums:
+        if num not in unique_set:
+            unique_set.append(num)
+    return unique_set
+def perm(s):
+    pl = [''.join(i) for i in permutations(s)]
+    for i in pl:
+        print(i)
+l = [1,2,3,4,5,1,2]
+print(unique(l))
+u= "asd"
+print(perm(u))
