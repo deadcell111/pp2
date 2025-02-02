@@ -1,5 +1,8 @@
-import math
-def volume_of_sphere(r):
-    return 4/3 * math.pi * (r **3)
-r = int(input())
-print(volume_of_sphere(r))
+def unique(nums):
+    unique_set = []
+    for num in nums:
+        if num not in unique_set:
+            unique_set.append(num)
+    return unique_set
+l = [1,2,3,4,5,2,3,4,5,6]
+print(unique(l))
