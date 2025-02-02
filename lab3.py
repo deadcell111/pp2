@@ -1,7 +1,4 @@
-from itertools import permutations
-def perm(s):
-    pl = [''.join(i) for i in permutations(s)]
-    for i in pl:
-        print(i)
-j = input()
-perm(j)
+def reversed(s):
+    return ' '.join(s.split()[::-1])
+a = input()
+print(reversed(a))
