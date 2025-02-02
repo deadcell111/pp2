@@ -1,16 +1,10 @@
-def solve(numheads,numlegs):
-    """4x + 2y = 94
-    x + y = 35, x = 35 - y
-    140 - 2y = 94
-    -2y = -46 
-    y = 23
-    x = 12"""
-    for chick in range(numheads + 1):
-        rab = numheads - chick
-        if(chick * 2 + rab * 4) == numlegs:
-            return chick, rab
-heads = 35
-legs = 94
-print(solve(heads,legs))
-
-    
+l = [1, 2, 3, 4, 5]
+def filter_prime(x):
+    if x > 1:
+        for i in range (2, (x//2) + 1):
+            if x % i == 0:
+                return False
+        return True
+for i in range(len(l)):
+    if(filter_prime(l[i])):
+        print(l[i])
