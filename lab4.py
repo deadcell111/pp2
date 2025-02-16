@@ -1,20 +1,51 @@
-import math
-#1
-a = int(input("Input degree: "))
-print(f"Output radian:",math.radians(a))
-#2
-h = int(input("Height: "))
-f = int(input("Base, first value: "))
-s = int(input("Base, second value: "))
-area = ((f + s)/2) * h
-print("Expected Output: ", area)
-#3
-side = int(input('Input number of sides: '))
-length1 = int(input("Input the length of a side: "))
-area2 = (side * length1 ** 2)/(4 * math.tan(math.pi / side))
-
-print(f"Area of polygon: {area2}")
-#4
-lb = int(input("Length of base: "))
-hb = int(input("Height of parallelogram: "))
-print("Expected Output: ",lb * hb)
+import json
+json_data = """
+{
+    "totalCount": "400",
+    "imdata": [
+        {
+            "l1PhysIf": {
+                "attributes": {
+                    "dn": "topology/pod-1/node-201/sys/phys-[eth1/33]",
+                    "descr": "",
+                    "speed": "inherit",
+                    "mtu": "9150"
+                }
+            }
+        },
+        {
+            "l1PhysIf": {
+                "attributes": {
+                    "dn": "topology/pod-1/node-201/sys/phys-[eth1/34]",
+                    "descr": "",
+                    "speed": "inherit",
+                    "mtu": "9150"
+                }
+            }
+        },
+        {
+            "l1PhysIf": {
+                "attributes": {
+                    "dn": "topology/pod-1/node-201/sys/phys-[eth1/35]",
+                    "descr": "",
+                    "speed": "inherit",
+                    "mtu": "9150"
+                }
+            }
+        }
+    ]
+}
+"""
+data = json.loads(json_data)
+print("Interface Status")
+print("=" * 80)
+print(f"{'DN':<50} {'Description':<20} {'Speed':<10} {'MTU':<10}")
+print("-" * 80)
+for item in data["imdata"]:
+    attributes = item["l1PhysIf"]["attributes"]
+    dn = attributes["dn"]
+    descr = attributes["descr"] if attributes["descr"] else ""
+    speed = attributes["speed"]
+    mtu = attributes["mtu"]
+    
+    print(f"{dn:<50} {descr:<20} {speed:<10} {mtu:<10}")
