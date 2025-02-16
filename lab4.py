@@ -1,48 +1,20 @@
-def first(n):
-    cnt = 1
-    while cnt <= n:
-        yield (cnt**2)
-        cnt += 1
-n = int(input())
-ftr = first(n)
-"""for n in ctr:
-    print(n)"""
-    
-def second(n):
-    for i in range(0,n + 1):
-        s = str(i)
-        if i % 2 == 0:
-            if i >= 0 and i != n:
-                yield(s) + ','
-            else:
-                yield(s)
-setr = second(n)
-"""for n in setr:
-    print(n, end = " ")"""
+import math
+#1
+a = int(input("Input degree: "))
+print(f"Output radian:",math.radians(a))
+#2
+h = int(input("Height: "))
+f = int(input("Base, first value: "))
+s = int(input("Base, second value: "))
+area = ((f + s)/2) * h
+print("Expected Output: ", area)
+#3
+side = int(input('Input number of sides: '))
+length1 = int(input("Input the length of a side: "))
+area2 = (side * length1 ** 2)/(4 * math.tan(math.pi / side))
 
-def third(n):
-    for i in range(0,n):
-        if i % 3 == 0 and i % 4 == 0:
-            yield(i)
-tr = third(n)
-for n in tr:
-    print(n)
-
-def squared(a,b):
-    for i in range(a,b + 1):
-        yield(i **2)
-a = int(input())
-b = int(input())
-frd = squared(a,b)
-for n in frd:
-    print(n, end = " ")
-
-
-def fifth(n):
-    while n >= 0:
-        yield(n)
-        n -= 1
-n = int(input())
-fif = fifth(n)
-for i in fif:
-    print(i, end = " ")
+print(f"Area of polygon: {area2}")
+#4
+lb = int(input("Length of base: "))
+hb = int(input("Height of parallelogram: "))
+print("Expected Output: ",lb * hb)
