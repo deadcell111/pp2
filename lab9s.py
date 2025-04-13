@@ -131,7 +131,7 @@ while running:
     new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])
 
     # Проверка на столкновение
-    if new_head in walls or new_head in snake:
+    if new_head in walls:
         show_game_over_screen()
 
     snake.insert(0, new_head)
@@ -150,6 +150,6 @@ while running:
     if food:
         food["timer"] -= 1
         if food["timer"] <= 0:
-            food = get_food()
+            food = get_food()      
 
     draw_game()
